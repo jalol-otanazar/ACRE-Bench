@@ -25,12 +25,14 @@ The benchmark is built to scale from a few hundred items to well over a thousand
 - `benchmark/stage4_spec.md` - final held-out evaluation protocol
 - `benchmark/stage5_spec.md` - retrieval vs generation diagnostics
 - `benchmark/stage6_spec.md` - audit and contamination checks
+- `benchmark/stage7_spec.md` - maintenance and regression layer
 - `benchmark/eval.py` - answer and citation scorer
 - `scripts/expand_questions.py` - expands the seed set into a larger evaluation file
 - `scripts/build_stage3.py` - builds the adversarial stage 3 question file
 - `scripts/build_stage4.py` - builds the held-out final split
 - `scripts/build_stage5.py` - builds the diagnostic split placeholders
 - `scripts/build_stage6.py` - builds the audit reports
+- `scripts/build_stage7.py` - builds the locked regression suite and candidate pool
 
 ## Design principle
 
@@ -52,6 +54,7 @@ That means it separates:
 - **Stage 4:** 120 to 250 held-out final questions
 - **Stage 5:** diagnostic splits for retrieval and generation failure analysis
 - **Stage 6:** audit reports for contamination and overlap checks
+- **Stage 7:** locked regression suite plus candidate pool for future releases
 - **Adversarial negatives:** at least 20% of the final set
 - **False-premise items:** at least 15% of the final set
 
