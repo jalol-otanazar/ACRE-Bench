@@ -1,1 +1,61 @@
 # ACRE-Bench
+
+**Aristotelian Corpus Retrieval Evaluation**
+
+ACRE-Bench is a corpus-focused benchmark for testing modern RAG systems on Aristotle’s works. It is designed to expose the failure modes that matter most in production:
+
+- retrieval on famous passages only
+- semantic drift across repeated terms
+- near-duplicate distractors
+- multi-hop synthesis across distant works
+- list and order sensitivity
+- hallucinated answers to false premises
+- weak source attribution
+
+The benchmark is built to scale from a few hundred items to well over a thousand by combining a curated seed set with deterministic question expansion.
+
+## Repository layout
+
+- `benchmark/spec.md` - benchmark design, scoring, and category definitions
+- `benchmark/corpus_manifest.yaml` - canonical Aristotle works and retrieval targets
+- `benchmark/seed_questions.jsonl` - hand-authored gold seeds
+- `benchmark/eval.py` - answer and citation scorer
+- `scripts/expand_questions.py` - expands the seed set into a larger evaluation file
+
+## Design principle
+
+The benchmark is not a philosophy quiz. It is a stress test for retrieval systems.
+
+That means it separates:
+
+- retrieval success
+- ranking quality
+- grounded answering
+- refusal behavior
+- robustness to distractors
+
+## Recommended sizes
+
+- **Seed set:** 50 to 120 carefully curated questions
+- **Evaluation set:** 300 to 1000+ generated variants
+- **Adversarial negatives:** at least 20% of the final set
+- **False-premise items:** at least 15% of the final set
+
+## How to use
+
+1. Put the Aristotle corpus you want to benchmark into your RAG index.
+2. Expand the seed questions into a large evaluation file.
+3. Run your system on the questions.
+4. Score outputs with the evaluator.
+
+The benchmark is translation-sensitive by design, so the corpus manifest should be aligned to one edition or explicitly mapped across editions.
+
+## Why this matters
+
+A strong RAG system should do more than answer famous facts. It should:
+
+- find the right passage among many plausible ones
+- resist grabbing the first similar-looking chunk
+- stay grounded when the question is ambiguous
+- reject false premises instead of improvising
+- handle corpus-specific terminology consistently
