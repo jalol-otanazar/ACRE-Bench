@@ -19,6 +19,8 @@ The benchmark is built to scale from a few hundred items to well over a thousand
 - `benchmark/spec.md` - benchmark design, scoring, and category definitions
 - `benchmark/corpus_manifest.yaml` - canonical Aristotle works and retrieval targets
 - `benchmark/seed_questions.jsonl` - hand-authored gold seeds
+- `benchmark/stage2_questions.jsonl` - expanded seed variants for the first large stress pass
+- `benchmark/stage2_spec.md` - notes for the stage 2 expansion phase
 - `benchmark/eval.py` - answer and citation scorer
 - `scripts/expand_questions.py` - expands the seed set into a larger evaluation file
 
