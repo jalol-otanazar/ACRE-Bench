@@ -21,8 +21,10 @@ The benchmark is built to scale from a few hundred items to well over a thousand
 - `benchmark/seed_questions.jsonl` - hand-authored gold seeds
 - `benchmark/stage2_questions.jsonl` - expanded seed variants for the first large stress pass
 - `benchmark/stage2_spec.md` - notes for the stage 2 expansion phase
+- `benchmark/stage3_spec.md` - hard-mode adversarial design for the full stress pass
 - `benchmark/eval.py` - answer and citation scorer
 - `scripts/expand_questions.py` - expands the seed set into a larger evaluation file
+- `scripts/build_stage3.py` - builds the adversarial stage 3 question file
 
 ## Design principle
 
@@ -39,7 +41,8 @@ That means it separates:
 ## Recommended sizes
 
 - **Seed set:** 50 to 120 carefully curated questions
-- **Evaluation set:** 300 to 1000+ generated variants
+- **Stage 2:** 200 to 400 paraphrase-expanded questions
+- **Stage 3:** 600 to 900 adversarial questions with harder traps and mixed instruction styles
 - **Adversarial negatives:** at least 20% of the final set
 - **False-premise items:** at least 15% of the final set
 
