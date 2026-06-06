@@ -1,0 +1,67 @@
+works:
+  - name: Categories
+    family: logic
+    role: definitions, predication, categories
+  - name: De Interpretatione
+    family: logic
+    role: propositions, opposition, modality
+  - name: Prior Analytics
+    family: logic
+    role: syllogistic structure
+  - name: Posterior Analytics
+    family: logic
+    role: demonstration and scientific knowledge
+  - name: Topics
+    family: logic
+    role: dialectic and premises
+  - name: Sophistical Refutations
+    family: logic
+    role: fallacies and refutation
+  - name: Physics
+    family: nature
+    role: motion, change, causality, teleology
+  - name: On the Heavens
+    family: nature
+    role: celestial bodies and cosmology
+  - name: On Generation and Corruption
+    family: nature
+    role: elements and transformation
+  - name: Meteorologica
+    family: nature
+    role: atmospheric and celestial phenomena
+  - name: De Anima
+    family: psychology
+    role: soul, intellect, perception, phantasia
+  - name: De Memoria
+    family: psychology
+    role: memory and reminiscence
+  - name: De Insomniis
+    family: psychology
+    role: dreams
+  - name: History of Animals
+    family: biology
+    role: animal taxonomy and physiology
+  - name: Parts of Animals
+    family: biology
+    role: biological explanation and teleology
+  - name: Generation of Animals
+    family: biology
+    role: reproduction and form/material
+  - name: Nicomachean Ethics
+    family: ethics
+    role: virtue, friendship, justice, prudence
+  - name: Eudemian Ethics
+    family: ethics
+    role: virtue and noble character
+  - name: Politics
+    family: politics
+    role: constitution, household, civic order
+  - name: Rhetoric
+    family: rhetoric
+    role: persuasion and emotions
+  - name: Poetics
+    family: poetics
+    role: tragedy and catharsis
+  - name: Metaphysics
+    family: metaphysics
+    role: being, substance, potentiality, non-contradiction, first philosophy
